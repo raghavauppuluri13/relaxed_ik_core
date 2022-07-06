@@ -32,6 +32,13 @@ pub unsafe extern "C" fn dynamic_obstacle_cb(name: *const c_char, pos_arr: *cons
 }
 
 #[no_mangle]
+pub unsafe extern "C" fn update_joints(joint_arr: *const c_double) {
+    let jnt_slice: &[c_double] = std::slice::from_raw_parts(joint_arr, R.lock().unwrap().vars.xopt.len() as usize);
+    let jnt_vec = jnt_slice.to_vec();
+    R.lock().unwrap().vars.update(jnt_vec);
+}
+
+#[no_mangle]
 pub unsafe extern "C" fn solve(pos_arr: *const c_double, pos_length: c_int, 
     quat_arr: *const c_double, quat_length: c_int) -> relaxed_ik::Opt {
     assert!(!pos_arr.is_null(), "Null pointer for pos goals!");
