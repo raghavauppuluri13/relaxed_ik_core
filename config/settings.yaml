@@ -2,7 +2,7 @@
 loaded_robot:
   name: arm_info.yaml # please enter the name of the corresponding info file
   link_radius: 0.01 # by default
-  objective_mode: noECA 
+  objective_mode: ECA3
   # please type keyboard here if interactive control is desired; if you want to have
   # the robot arm follow a cartesian path, put the animation file in the 
   # animation_files folder and type the file name here
