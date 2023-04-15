@@ -1,0 +1,6 @@
+def joint_state_define(x):
+    js = JointState()
+    js.name = [ "joint_5", "joint_4", "eef", "joint_3", "joint_2", "joint_1" ]
+    js.position = [x[0], x[1], 0.0, x[2],x[3],x[4]]
+    js.position = tuple(js.position)
+    return js
