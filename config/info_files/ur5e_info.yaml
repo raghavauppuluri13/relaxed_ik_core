@@ -1,0 +1,17 @@
+urdf_file_name: "ur5e.urdf"
+fixed_frame: "base_link"
+joint_names: [ [ "shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint", "wrist_3_joint" ] ]
+joint_ordering: [ "shoulder_pan_joint", "shoulder_lift_joint", "elbow_joint", "wrist_1_joint", "wrist_2_joint", "wrist_3_joint" ]
+ee_fixed_joints: [ "wrist_3_link-tool0_fixed_joint" ]
+starting_config: [ -3.15918557245, -1.29056626209, 1.9144865631, -2.15513256036, -1.56953968973, -0.565486677646 ]
+collision_file_name: "collision_ur5e.yaml"
+collision_nn_file: "ur5e_nn"
+path_to_src: "/code/src/relaxed_ik/src"
+axis_types: [ [ "z", "y", "y", "y", "z", "y" ] ]
+velocity_limits: [ 3.14, 3.14, 3.14, 6.28, 6.28, 6.28 ]
+joint_limits: [ [-6.28318530718,6.28318530718], [-6.28318530718,6.28318530718], [-3.14159265359,3.14159265359], [-6.28318530718,6.28318530718], [-6.28318530718,6.28318530718], [-6.28318530718,6.28318530718] ]
+displacements: [ [ [0.0,0.138,0.0], [0.0,-0.131,0.425], [0.0,0.0,0.392], [0.0,0.127,0.0], [0.0,0.0,0.1], [0.0,0.1,0.0] ] ]
+disp_offsets: [ [0.0,0.0,0.163] ]
+rot_offsets: [ [ [0.0,0.0,0.0], [0.0,1.57079632679,0.0], [0.0,0.0,0.0], [0.0,1.57079632679,0.0], [0.0,0.0,0.0], [0.0,0.0,0.0], [-1.57079632679,0.0,0.0] ] ]
+joint_types: [ [ "revolute", "revolute", "revolute", "revolute", "revolute", "revolute" ] ]
+joint_state_define_func_file: "ur5e_joint_state_define"
