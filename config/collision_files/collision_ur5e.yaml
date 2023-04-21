@@ -9,11 +9,12 @@ sample_states: [  [-0.1332035285122073, -1.5469202226276142, 2.588044028027272, 
 training_states:
 problem_states:
 spheres:
-  - name: sphere1
-    parameters: .02
-    coordinate_frame: 9
-    rotation: [0,0,0]
-    translation: [.115,0.025,-0.053]
 ellipsoids:
 capsules:
 cylinders:
+boxes:
+  - name: eef
+    parameters: [0.055,0.065,0.155]
+    coordinate_frame: 9
+    rotation: [0,0,0]
+    translation: [0,0,0.0775]
